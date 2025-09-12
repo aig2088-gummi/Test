@@ -10,8 +10,7 @@ def welcome_assignment_answers(question):
     elif question == "Is a hashed message supposed to be un-hashed? - Yes/No":
         answer = "No"
     elif question == "What is the SHA256 hashing value of your NYU email and use the answer in your code - ":
-
-        answer = "paste_your_hash_here"
+        answer = "aig2088@nyu.edu"
     elif question == "Is MD5 a secured hashing algorithm? - Yes/No":
         answer = "No"
     elif question == "What layer of the TCP/IP model does the protocol DNS belong to? - The answer should be an integer number":
@@ -19,8 +18,7 @@ def welcome_assignment_answers(question):
     elif question == "What layer of the TCP/IP model does the protocol ICMP belong to? - The answer should be an integer number":
         answer = 3
     elif question == "In Slack, what is the secret passphrase posted in the #lab-python-getting-started channel posted by a TA?":
-        answer = "aig@2088.nyu.edu"
-        answer = "your_passphrase_from_slack"
+        answer = "NYU Computer Networking"
     else:
         answer = "Error: Question not recognized"
     return answer
