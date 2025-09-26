@@ -14,6 +14,7 @@ def webServer(port=13331):
   #Fill in start
   serverSocket.listen(1)
   #Fill in end
+  print("Ready to serve on port...", port)
 
   while True:
     #Establish the connection
@@ -33,6 +34,7 @@ def webServer(port=13331):
 
       #This variable can store the headers you want to send for any valid or invalid request.   What header should be sent for a response that is ok?    
       #Fill in start 
+      
               
       #Content-Type is an example on how to send a header as bytes. There are more!
       outputdata = b"Content-Type: text/html; charset=UTF-8\r\n"
@@ -52,8 +54,9 @@ def webServer(port=13331):
 
 
       # Fill in end
-        
-      connectionSocket.close() #closing the connection socket
+      # closing the connection socket
+
+      connectionSocket.close()
       
     except Exception as e:
       # Send response message for invalid request due to the file not being found (404)
@@ -64,9 +67,13 @@ def webServer(port=13331):
 
 
       #Close client socket
+      connectionSocket.close()
+
       #Fill in start
 
       #Fill in end
+    
+
 
   # Commenting out the below (some use it for local testing). It is not required for Gradescope, and some students have moved it erroneously in the While loop. 
   # DO NOT PLACE ANYWHERE ELSE AND DO NOT UNCOMMENT WHEN SUBMITTING, YOU ARE GONNA HAVE A BAD TIME
